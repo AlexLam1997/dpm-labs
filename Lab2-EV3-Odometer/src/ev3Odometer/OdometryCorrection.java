@@ -72,7 +72,7 @@ public class OdometryCorrection extends Thread {
 	 */
 	private boolean isRobotRotating() {
 		// If absolute changes for both x and y are very small, robot must be rotating
-		if ( odometer.getX() < Math.abs(0.1) && odometer.getY() < Math.abs(0.1) ) {
+		if ( Math.abs(odometer.getX()) < Math.abs(0.1) && Math.abs(odometer.getY()) < Math.abs(0.1) ) {
 			return true;
 		}
 		return false;
